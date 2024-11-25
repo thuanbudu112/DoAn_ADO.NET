@@ -1,0 +1,11 @@
+D:\LTUD\do_an_ltud\doan_ver1.0\bin\Debug\doan_ver1.0.exe.config
+D:\LTUD\do_an_ltud\doan_ver1.0\bin\Debug\doan_ver1.0.exe
+D:\LTUD\do_an_ltud\doan_ver1.0\bin\Debug\doan_ver1.0.pdb
+D:\LTUD\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.csproj.AssemblyReference.cache
+D:\LTUD\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1._0.Form1.resources
+D:\LTUD\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1._0.Properties.Resources.resources
+D:\LTUD\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.csproj.GenerateResource.cache
+D:\LTUD\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.csproj.CoreCompileInputs.cache
+D:\LTUD\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.exe
+D:\LTUD\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.pdb
+D:\LTUD\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1._0.FormDangKy.resources
