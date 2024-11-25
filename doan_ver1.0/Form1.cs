@@ -19,12 +19,25 @@ namespace doan_ver1._0
             home_hienthi = new home_giaodien();
         }
 
-        SqlConnection connect = new SqlConnection("Data Source=LAPTOP-BA92BEJG\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True");
+        SqlConnection connect = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
         public Form1()
         {
             InitializeComponent();
         }
         private void result1(int i)
+        {
+            if (i == 1)
+            {
+                MessageBox.Show("Đăng nhập thành ");
+                set_giaodien();
+                home_hienthi.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Đăng nhập thất bại hãy kiểm tra lại user, pass", "Warring !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void result21(int i)
         {
             if (i == 1)
             {
