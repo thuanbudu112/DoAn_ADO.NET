@@ -21,3 +21,30 @@ VALUES
 select * from TaiKhoan
 
 create proc dangnhap_taikhoan(@user nvarchar(50), @pass nvarchar(100))
+
+--Store Dang Ky
+create proc tp_ThemTaiKhoan(@tenDangNhap nvarchar(50), @matKhau nvarchar(100),@hoTen nvarchar(100),@email nvarchar(100), @vaiTro nvarchar(50), @ngayTao datetime)
+as 
+insert into TaiKhoan values (@tenDangNhap, @matKhau ,@hoTen,@email,@vaiTro,@ngayTao)
+
+exec tp_ThemTaiKhoan 'dongpham','123','Pham Dinh Dong','dong12062004@gmail.com','Tro vien','12/12/2020'
+
+create proc tp_XoaTaiKhoan(@tenDangNhap nvarchar(50))
+as
+delete TaiKhoan
+where TenDangNhap = @tenDangNhap
+
+exec tp_XoaTaiKhoan 'dongpham'
+
+create proc tp_SuaTaiKhoan(@tenDangNhap nvarchar(50), @matKhauNew nvarchar(100),@hoTenNew nvarchar(100),@emailNew nvarchar(100), @vaiTroNew nvarchar(50), @ngayTaoNew datetime)
+as
+update TaiKhoan
+set MatKhau = @matKhauNew,
+    HoTen = @hoTenNew,
+	Email = @emailNew,
+	VaiTro = @vaiTroNew,
+	NgayTao = @ngayTaoNew
+where TenDangNhap = @tenDangNhap
+
+exec tp_SuaTaiKhoan 'dongpham','456','Pham Dinh Phuong','23211TT3228@mail.tdc.edu.vn','Giang vien','11/25/2024'
+
