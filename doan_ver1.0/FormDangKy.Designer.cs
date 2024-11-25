@@ -224,6 +224,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormDangKy";
             this.Text = "FormDangKy";
+            this.Load += new System.EventHandler(this.FormDangKy_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

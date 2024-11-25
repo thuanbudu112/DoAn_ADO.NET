@@ -17,7 +17,7 @@ namespace doan_ver1._0
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection("Data Source=LAPTOP-BA92BEJG\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
 
         public DataTable LoadDuLieuDangKy()
         {
@@ -95,6 +95,11 @@ namespace doan_ver1._0
             {
                 conn.Close();
             }
+        }
+
+        private void FormDangKy_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

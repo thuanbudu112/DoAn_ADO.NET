@@ -29,7 +29,7 @@ namespace doan_ver1._0
         {
             if (i == 1)
             {
-                MessageBox.Show("Đăng nhập thành công");
+                MessageBox.Show("Đăng nhập thành ");
                 set_giaodien();
                 home_hienthi.ShowDialog();
             }
