@@ -24,7 +24,19 @@ namespace doan_ver1._0
         {
             InitializeComponent();
         }
-
+        private void result1(int i)
+        {
+            if (i == 1)
+            {
+                MessageBox.Show("Đăng nhập thành ");
+                set_giaodien();
+                home_hienthi.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Đăng nhập thất bại hãy kiểm tra lại user, pass", "Warring !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void result(int i)
         {
             if (i == 1)
