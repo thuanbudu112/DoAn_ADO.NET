@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\",
+  "WorkspaceRootPath": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|c:\\learning program\\tdc\\ltud\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|c:\\learning program\\tdc\\ltud\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|solutionrelative:doan_ver1.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|solutionrelative:doan_ver1.0\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|solutionrelative:doan_ver1.0\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|solutionrelative:doan_ver1.0\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\home_giaodien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\home_giaodien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|solutionrelative:doan_ver1.0\\home_giaodien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|solutionrelative:doan_ver1.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -44,23 +44,22 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "FormDangKy.cs",
-              "DocumentMoniker": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\FormDangKy.cs",
+              "DocumentMoniker": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\FormDangKy.cs",
               "RelativeDocumentMoniker": "doan_ver1.0\\FormDangKy.cs",
-              "ToolTip": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\FormDangKy.cs",
+              "ToolTip": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\FormDangKy.cs",
               "RelativeToolTip": "doan_ver1.0\\FormDangKy.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAjwGUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAjwGUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T15:22:23.313Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T15:22:23.313Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "home_giaodien.cs [Design]",
-              "DocumentMoniker": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\home_giaodien.cs",
+              "DocumentMoniker": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\home_giaodien.cs",
               "RelativeDocumentMoniker": "doan_ver1.0\\home_giaodien.cs",
               "ToolTip": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doantest\\do_an_ltud\\doan_ver1.0\\home_giaodien.cs [Design]",
-              "RelativeToolTip": "..\\..\\doantest\\do_an_ltud\\doan_ver1.0\\home_giaodien.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\doantest\\do_an_ltud\\doan_ver1.0\\home_giaodien.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T11:57:45.89Z"
             },
@@ -68,9 +67,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\Form1.cs",
+              "DocumentMoniker": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\Form1.cs",
               "RelativeDocumentMoniker": "doan_ver1.0\\Form1.cs",
-              "ToolTip": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\Form1.cs [Design]",
+              "ToolTip": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\Form1.cs [Design]",
               "RelativeToolTip": "doan_ver1.0\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T09:33:10.727Z",
@@ -80,11 +79,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\Form1.cs",
+              "DocumentMoniker": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\Form1.cs",
               "RelativeDocumentMoniker": "doan_ver1.0\\Form1.cs",
-              "ToolTip": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\Form1.cs",
+              "ToolTip": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\Form1.cs",
               "RelativeToolTip": "doan_ver1.0\\Form1.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAtwBoAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAWwCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T09:47:17.363Z",
               "EditorCaption": ""
@@ -93,21 +92,20 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "FormDangKy.cs [Design]",
-              "DocumentMoniker": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\FormDangKy.cs",
+              "DocumentMoniker": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\FormDangKy.cs",
               "RelativeDocumentMoniker": "doan_ver1.0\\FormDangKy.cs",
               "ToolTip": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\FormDangKy.cs [Design]",
-              "RelativeToolTip": "doan_ver1.0\\FormDangKy.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\doan\\do_an_ltud\\doan_ver1.0\\FormDangKy.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T14:20:05.951Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-25T14:20:05.951Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\Program.cs",
+              "DocumentMoniker": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\Program.cs",
               "RelativeDocumentMoniker": "doan_ver1.0\\Program.cs",
-              "ToolTip": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\Program.cs",
+              "ToolTip": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\test\\t1\\do_an_ltud\\doan_ver1.0\\Program.cs",
               "RelativeToolTip": "doan_ver1.0\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
