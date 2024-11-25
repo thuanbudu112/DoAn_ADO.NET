@@ -21,10 +21,10 @@ VALUES
 select * from TaiKhoan
 
 create proc dangnhap_taikhoan(@user nvarchar(50), @pass nvarchar(100))
-as 
-select count(*) from TaiKhoan
-where TenDangNhap = @user and MatKhau = @pass
 
+create proc tp_xemTaiKhoan
+as 
+Select * From TaiKhoan
 --Store Dang Ky
 create proc tp_ThemTaiKhoan(@tenDangNhap nvarchar(50), @matKhau nvarchar(100),@hoTen nvarchar(100),@email nvarchar(100), @vaiTro nvarchar(50), @ngayTao datetime)
 as 

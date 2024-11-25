@@ -200,7 +200,6 @@
             this.btnThoat.TabIndex = 15;
             this.btnThoat.Text = "THOÁT !";
             this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // FormDangKy
             // 

@@ -20,3 +20,14 @@ C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan\do_an_ltud\doan_ver1.0\
 C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.csproj.CoreCompileInputs.cache
 C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.exe
 C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.pdb
+E:\DoAnUngDung\doan_ltud_ver2\do_an_ltud\doan_ver1.0\bin\Debug\doan_ver1.0.exe.config
+E:\DoAnUngDung\doan_ltud_ver2\do_an_ltud\doan_ver1.0\bin\Debug\doan_ver1.0.exe
+E:\DoAnUngDung\doan_ltud_ver2\do_an_ltud\doan_ver1.0\bin\Debug\doan_ver1.0.pdb
+E:\DoAnUngDung\doan_ltud_ver2\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.csproj.AssemblyReference.cache
+E:\DoAnUngDung\doan_ltud_ver2\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1._0.Form1.resources
+E:\DoAnUngDung\doan_ltud_ver2\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1._0.FormDangKy.resources
+E:\DoAnUngDung\doan_ltud_ver2\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1._0.Properties.Resources.resources
+E:\DoAnUngDung\doan_ltud_ver2\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.csproj.GenerateResource.cache
+E:\DoAnUngDung\doan_ltud_ver2\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.csproj.CoreCompileInputs.cache
+E:\DoAnUngDung\doan_ltud_ver2\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.exe
+E:\DoAnUngDung\doan_ltud_ver2\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.pdb
