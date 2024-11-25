@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|solutionrelative:doan_ver1.0\\formdangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|c:\\learning program\\tdc\\ltud\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E037D7F4-B660-4D1C-9FC7-C03E1EC2CCEA}|doan_ver1.0\\doan_ver1.0.csproj|solutionrelative:doan_ver1.0\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -62,8 +62,7 @@
               "ToolTip": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\home_giaodien.cs [Design]",
               "RelativeToolTip": "doan_ver1.0\\home_giaodien.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T11:57:45.89Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-25T11:57:45.89Z"
             },
             {
               "$type": "Document",
@@ -87,8 +86,7 @@
               "RelativeToolTip": "doan_ver1.0\\Form1.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAIA6wFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T09:47:17.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T09:47:17.363Z"
             },
             {
               "$type": "Document",
@@ -99,8 +97,7 @@
               "ToolTip": "C:\\learning program\\TDC\\LTUD\\quanly_cuahang_dienmay\\doan\\do_an_ltud\\doan_ver1.0\\FormDangKy.cs [Design]",
               "RelativeToolTip": "doan_ver1.0\\FormDangKy.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T14:20:05.951Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-25T14:20:05.951Z"
             },
             {
               "$type": "Document",
@@ -112,8 +109,7 @@
               "RelativeToolTip": "doan_ver1.0\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T14:24:04.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T14:24:04.618Z"
             }
           ]
         }
