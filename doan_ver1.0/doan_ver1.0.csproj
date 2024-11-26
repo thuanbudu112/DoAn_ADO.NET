@@ -64,6 +64,12 @@
     <Compile Include="home_giaodien.Designer.cs">
       <DependentUpon>home_giaodien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Info_people.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info_people.Designer.cs">
+      <DependentUpon>Info_people.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="home_giaodien.resx">
       <DependentUpon>home_giaodien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info_people.resx">
+      <DependentUpon>Info_people.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -43,3 +43,4 @@ C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doantest\do_an_ltud\doan_ver
 C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doantest\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.exe
 C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doantest\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1.0.pdb
 C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1._0.home_giaodien.resources
+C:\learning program\TDC\LTUD\quanly_cuahang_dienmay\doan\do_an_ltud\doan_ver1.0\obj\Debug\doan_ver1._0.Info_people.resources
