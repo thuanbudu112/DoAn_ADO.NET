@@ -51,3 +51,52 @@ where TenDangNhap = @tenDangNhap
 
 exec tp_SuaTaiKhoan 'dongpham','456','Pham Dinh Phuong','23211TT3228@mail.tdc.edu.vn','Giang vien','11/25/2024'
 
+	create table SanPham(
+		MaNhapHang INT IDENTITY(1,1) PRIMARY KEY, 
+		MaSanPham nvarchar(50) not null,
+		TenSanPham NVARCHAR(50) NOT NULL UNIQUE,
+		NgayNhap DATETIME DEFAULT GETDATE(),
+		SoLuong int not null,
+		DonGia decimal(18,2) not null,
+		ThanhTien decimal(18,2) not null,
+		DanhMuc nvarchar(100)
+	);
+
+	CREATE TABLE CuaHang (
+		MaCuaHang INT IDENTITY(1,1) PRIMARY KEY,  -- Mã cửa hàng tự động tăng
+		TenCuaHang NVARCHAR(100) NOT NULL,        -- Tên cửa hàng
+		DiaChi NVARCHAR(200) NOT NULL,            -- Địa chỉ cửa hàng
+		SoDienThoai NVARCHAR(15) NOT NULL         -- Số điện thoại liên hệ
+	);
+
+	INSERT INTO SanPham (MaSanPham, TenSanPham, SoLuong, DonGia, ThanhTien, DanhMuc)
+VALUES 
+('SP001', 'Tủ Lạnh Samsung', 10, 15000000, 150000000, 'Điện Lạnh'),
+('SP002', 'Máy Giặt LG', 5, 10000000, 50000000, 'Gia Dụng'),
+('SP003', 'Điều Hòa Panasonic', 8, 12000000, 96000000, 'Điện Lạnh'),
+('SP004', 'Lò Vi Sóng Sharp', 7, 3000000, 21000000, 'Gia Dụng'),
+('SP005', 'Smart TV Sony', 4, 20000000, 80000000, 'Điện Tử');
+
+
+INSERT INTO CuaHang (TenCuaHang, DiaChi, SoDienThoai)
+VALUES 
+('Cửa Hàng Điện Máy Xanh', '123 Đường Lê Lợi, Quận 1, TP.HCM', '0901234567'),
+('Cửa Hàng Nguyễn Kim', '456 Đường Hoàng Văn Thụ, Quận Tân Bình, TP.HCM', '0912345678'),
+('Cửa Hàng Điện Máy Chợ Lớn', '789 Đường 3 Tháng 2, Quận 10, TP.HCM', '0987654321'),
+('Cửa Hàng MediaMart', '101 Đường Phạm Hùng, Hà Nội', '0923456789'),
+('Cửa Hàng Pico', '303 Đường Nguyễn Trãi, Hà Nội', '0934567890');
+
+
+create proc tp_xemkho
+as
+select * from Sanpham
+
+exec tp_xemkho
+
+
+create proc tp_xem_cuahang
+as
+select *
+from CuaHang
+
+exec tp_xem_cuahang
