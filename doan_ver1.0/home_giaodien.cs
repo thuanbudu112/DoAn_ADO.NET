@@ -13,12 +13,25 @@ namespace doan_ver1._0
 {
     public partial class home_giaodien : Form
     {
-        public home_giaodien()
+        public home_giaodien(string vaitro)
         {
             InitializeComponent();
             panel_account.Hide();
+            quyen_admin(vaitro);
         }
+        private void quyen_admin(string vaitro)
+        {
+            if(vaitro != null)
+            {
+                if(vaitro != "Admin")
+                {
+                    table_info_accout.DefaultCellStyle.ForeColor = Color.White;
+                    table_info_accout.DefaultCellStyle.BackColor = Color.Black;
+                    app_account.Enabled = false;
 
+                }
+            }
+        }
         SqlConnection connect = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
 
         private DataTable loaddl_nhanvien()
@@ -80,12 +93,13 @@ namespace doan_ver1._0
         private void home_giaodien_FormClosed(object sender, FormClosedEventArgs e)
         {
             table_info_accout.DataSource = loaddl_nhanvien();
-
         }
 
         private void btn_dangky_Click(object sender, EventArgs e)
         {
             FormDangKy dangky = new FormDangKy();
+            dangky.Owner = this;
+            dangky.FormClosed += new FormClosedEventHandler(home_giaodien_FormClosed);
             dangky.ShowDialog();
         }
 

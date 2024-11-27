@@ -5,38 +5,58 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace doan_ver1._0
 {
-    public partial class Form1 : Form
+    public partial class form_login : Form
     {
-        private home_giaodien home_hienthi;
-        public void set_giaodien()
-        {
-            
-        }
-
         SqlConnection connect = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
-        public Form1()
+        
+        public form_login()
         {
             InitializeComponent();
         }
-
         private void result(int i)
         {
             if (i == 1)
             {
-                MessageBox.Show("Đăng nhập thành ");
-                set_giaodien();
-                home_hienthi.ShowDialog();
+                string vaitro = "";
+                MessageBox.Show("Đăng nhập thành công");
+                getvaitro(ref vaitro);
+                home_giaodien home = new home_giaodien(vaitro);
+                home.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Đăng nhập thất bại hãy kiểm tra lại user, pass", "Warring !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void getvaitro(ref string vaitro)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("tp_getvaitro", connect);   
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                //SqlParameter user = new SqlParameter("@user",txt_user_admin);
+                //cmd.Parameters.Add(user);
+                cmd.Parameters.AddWithValue("@user", txt_user_admin.Text);
+
+                vaitro = cmd.ExecuteScalar().ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+            }
+            
         }
 
         private void login()
@@ -73,17 +93,15 @@ namespace doan_ver1._0
             }
         }
 
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_login_admin_Click(object sender, EventArgs e)
         {
             login();
+            
+        }
+
+        private void form_login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

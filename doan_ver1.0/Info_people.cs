@@ -89,14 +89,19 @@ namespace doan_ver1._0
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
+            xoa_account();
+            this.Close();
+        }
+        private void xoa_account()
+        {
             try
             {
                 connect.Open();
-                SqlCommand cmd = new SqlCommand("tp_XoaTaiKhoan",connect);
+                SqlCommand cmd = new SqlCommand("tp_XoaTaiKhoan", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter user = new SqlParameter("@tenDangNhap",cb_user.Text);
-                cmd.Parameters.Add (user);
+                SqlParameter user = new SqlParameter("@tenDangNhap", cb_user.Text);
+                cmd.Parameters.Add(user);
 
                 if (cmd.ExecuteNonQuery() > 0)
                 {

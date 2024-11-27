@@ -47,7 +47,10 @@ namespace doan_ver1._0
         }
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-
+            them_account();
+            this.Close();
+        }
+        private void them_account() {
             try
             {
                 conn.Open();
@@ -100,6 +103,11 @@ namespace doan_ver1._0
         private void FormDangKy_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

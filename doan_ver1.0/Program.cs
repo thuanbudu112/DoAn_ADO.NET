@@ -16,7 +16,7 @@ namespace doan_ver1._0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new home_giaodien());
+            Application.Run(new form_login());
         }
     }
 }
