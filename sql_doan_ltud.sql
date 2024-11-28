@@ -2,6 +2,9 @@
 
 use quanly_cuahang_dienmay
 
+
+--Phan Hiep Dep trai
+
 CREATE TABLE TaiKhoan (
     MaTaiKhoan INT IDENTITY(1,1) PRIMARY KEY, -- Mã tài khoản tự động tăng
     TenDangNhap NVARCHAR(50) NOT NULL UNIQUE, -- Tên đăng nhập duy nhất
@@ -20,17 +23,9 @@ VALUES
 ('user2', 'hashed_password_789', N'Người Dùng 2', 'user2@domain.com', 'User'),
 ('user3', '123', 'Lê Đại Hiệp', N'user2@domain.com', 'User');
 
-
 select * from TaiKhoan
 
 create proc dangnhap_taikhoan(@user nvarchar(50), @pass nvarchar(100))
-as
-select COUNT(*)
-from TaiKhoan
-where TenDangNhap = @user and MatKhau=@pass
-
-exec dangnhap_taikhoan 'user3','123'
-
 
 create proc tp_xemTaiKhoan
 as 
@@ -56,7 +51,43 @@ begin
 
 	exec tp_getvaitro'hieppro1'
 
-exec tp_get_vaitro'hieppro1'
+--start stored seach tai khoan
+
+create proc seach_user(@user nvarchar(50))
+as
+select * from TaiKhoan 
+where TenDangNhap = @user
+
+create proc seach_maTK(@maTK int)
+as
+select * from TaiKhoan 
+where MaTaiKhoan = @maTK
+
+create proc seach_name(@name nvarchar(100))
+as
+select * from TaiKhoan 
+where HoTen = @name
+
+create proc seach_email(@email nvarchar(100))
+as
+select * from TaiKhoan 
+where Email = @email
+
+create proc seach_vaitro(@vaitro nvarchar(50))
+as
+select * from TaiKhoan 
+where VaiTro = @vaitro
+
+
+
+exec seach_user'hieppro1'
+exec seach_maTK '1'
+exec seach_name 'le dai hiep'
+exec seach_email 'lehiep08052005@gmail.com'
+exec seach_vaitro 'User'
+
+--end seach store taikhoan
+
 --Store Dang Ky
 create proc tp_ThemTaiKhoan(@tenDangNhap nvarchar(50), @matKhau nvarchar(100),@hoTen nvarchar(100),@email nvarchar(100), @vaiTro nvarchar(50), @ngayTao datetime)
 as 
@@ -64,13 +95,13 @@ insert into TaiKhoan values (@tenDangNhap, @matKhau ,@hoTen,@email,@vaiTro,@ngay
 
 
 exec tp_ThemTaiKhoan 'dongpham','123',N'Phạm Đình Phương Đông','dong12062004@gmail.com','Tro vien','12/12/2020'
-exec tp_ThemTaiKhoan 'thuanle','123',N'Lê Đình Thuận','ledinhthuan27@gmai.com','Admin','12/28/2024'
+
 create proc tp_XoaTaiKhoan(@tenDangNhap nvarchar(50))
 as
 delete TaiKhoan
 where TenDangNhap = @tenDangNhap
 
-exec tp_XoaTaiKhoan 'thuanbulon123'
+exec tp_XoaTaiKhoan 'dongpham'
 
 create proc tp_SuaTaiKhoan(@tenDangNhap nvarchar(50), @matKhauNew nvarchar(100),@hoTenNew nvarchar(100),@emailNew nvarchar(100), @vaiTroNew nvarchar(50), @ngayTaoNew datetime)
 as
@@ -84,6 +115,12 @@ where TenDangNhap = @tenDangNhap
 
 exec tp_SuaTaiKhoan 'dongpham','456','Pham Dinh Phuong','23211TT3228@mail.tdc.edu.vn','Giang vien','11/25/2024'
 
+
+--ket thuc phan cua hiep
+
+
+--phan san pham cua thuan
+
 	create table SanPham(
 		MaNhapHang INT IDENTITY(1,1) PRIMARY KEY, 
 		MaSanPham nvarchar(50) not null,
@@ -95,13 +132,7 @@ exec tp_SuaTaiKhoan 'dongpham','456','Pham Dinh Phuong','23211TT3228@mail.tdc.ed
 		DanhMuc nvarchar(100)
 	);
 
-	CREATE TABLE CuaHang (
-		MaCuaHang INT IDENTITY(1,1) PRIMARY KEY,  -- Mã cửa hàng tự động tăng
-		TenCuaHang NVARCHAR(100) NOT NULL,        -- Tên cửa hàng
-		DiaChi NVARCHAR(200) NOT NULL,            -- Địa chỉ cửa hàng
-		SoDienThoai NVARCHAR(15) NOT NULL         -- Số điện thoại liên hệ
-	);
-
+	
 INSERT INTO SanPham (MaSanPham, TenSanPham, SoLuong, DonGia, ThanhTien, DanhMuc)
 VALUES 
 ('SP001', 'Tủ Lạnh Samsung', 10, 15000000, 150000000, 'Điện Lạnh'),
@@ -110,17 +141,9 @@ VALUES
 ('SP004', 'Lò Vi Sóng Sharp', 7, 3000000, 21000000, 'Gia Dụng'),
 ('SP005', 'Smart TV Sony', 4, 20000000, 80000000, 'Điện Tử');
 
-
-INSERT INTO CuaHang (TenCuaHang, DiaChi, SoDienThoai)
-VALUES 
-('Cửa Hàng Điện Máy Xanh', '123 Đường Lê Lợi, Quận 1, TP.HCM', '0901234567'),
-('Cửa Hàng Nguyễn Kim', '456 Đường Hoàng Văn Thụ, Quận Tân Bình, TP.HCM', '0912345678'),
-('Cửa Hàng Điện Máy Chợ Lớn', '789 Đường 3 Tháng 2, Quận 10, TP.HCM', '0987654321'),
-('Cửa Hàng MediaMart', '101 Đường Phạm Hùng, Hà Nội', '0923456789'),
-('Cửa Hàng Pico', '303 Đường Nguyễn Trãi, Hà Nội', '0934567890');
-
-
-create proc tp_xemkho
+select * SanPham
+	
+	create proc tp_xemkho
 as
 select * from Sanpham
 
@@ -156,6 +179,8 @@ begin
 delete SanPham
 where MaSanPham = @MaSanPham
 end;
+
+
 CREATE PROCEDURE tp_SuaSanPham
     @MaSanPham NVARCHAR(50),
     @TenSanPham NVARCHAR(255),
@@ -175,3 +200,30 @@ BEGIN
         DanhMuc = @DanhMuc
     WHERE MaSanPham = @MaSanPham;
 end;
+
+
+--ket thuc phan san pham cua thuan
+
+
+--phan cua hang cua dong
+
+
+	CREATE TABLE CuaHang (
+		MaCuaHang INT IDENTITY(1,1) PRIMARY KEY,  -- Mã cửa hàng tự động tăng
+		TenCuaHang NVARCHAR(100) NOT NULL,        -- Tên cửa hàng
+		DiaChi NVARCHAR(200) NOT NULL,            -- Địa chỉ cửa hàng
+		SoDienThoai NVARCHAR(15) NOT NULL         -- Số điện thoại liên hệ
+	);
+
+
+
+	INSERT INTO CuaHang (TenCuaHang, DiaChi, SoDienThoai)
+	VALUES 
+	('Cửa Hàng Điện Máy Xanh', '123 Đường Lê Lợi, Quận 1, TP.HCM', '0901234567'),
+	('Cửa Hàng Nguyễn Kim', '456 Đường Hoàng Văn Thụ, Quận Tân Bình, TP.HCM', '0912345678'),
+	('Cửa Hàng Điện Máy Chợ Lớn', '789 Đường 3 Tháng 2, Quận 10, TP.HCM', '0987654321'),
+	('Cửa Hàng MediaMart', '101 Đường Phạm Hùng, Hà Nội', '0923456789'),
+	('Cửa Hàng Pico', '303 Đường Nguyễn Trãi, Hà Nội', '0934567890');
+
+
+
