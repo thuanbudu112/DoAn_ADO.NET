@@ -13,7 +13,7 @@ namespace doan_ver1._0
 {
     public partial class Info_people : Form
     {
-        SqlConnection connect = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
+        SqlConnection connect = new SqlConnection("Data Source=DESKTOP-QDFNGC7\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True");
 
         public Info_people(List<String> info)
         {

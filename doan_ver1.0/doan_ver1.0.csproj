@@ -122,5 +122,23 @@
   <ItemGroup>
     <None Include="Resources\OIP.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outdoor-unit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-shopping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feature.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-11-27 213933.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

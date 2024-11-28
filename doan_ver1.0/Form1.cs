@@ -19,7 +19,7 @@ namespace doan_ver1._0
             
         }
 
-        SqlConnection connect = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
+        SqlConnection connect = new SqlConnection("Data Source=DESKTOP-QDFNGC7\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True");
         public Form1()
         {
             InitializeComponent();
@@ -84,6 +84,11 @@ namespace doan_ver1._0
         private void button1_Click(object sender, EventArgs e)
         {
             login();
+        }
+
+        private void btn_login_user_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

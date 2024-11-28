@@ -14,7 +14,7 @@ namespace doan_ver1._0
 {
     public partial class form_login : Form
     {
-        SqlConnection connect = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
+        SqlConnection connect = new SqlConnection("Data Source=DESKTOP-QDFNGC7\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True");
         
         public form_login()
         {
@@ -25,14 +25,14 @@ namespace doan_ver1._0
             if (i == 1)
             {
                 string vaitro = "";
-                MessageBox.Show("Đăng nhập thành công");
+                MessageBox.Show("Đăng nhập thành công ! ","Thông báo");
                 getvaitro(ref vaitro);
                 home_giaodien home = new home_giaodien(vaitro);
                 home.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Đăng nhập thất bại hãy kiểm tra lại user, pass", "Warring !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Đăng nhập thất bại, vui lòng kiểm tra lại tên đăng nhập hoặc mật khẩu ", "Warring !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -40,7 +40,8 @@ namespace doan_ver1._0
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("tp_getvaitro", connect);   
+                
+                SqlCommand cmd = new SqlCommand("tp_get_vaitro", connect);   
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 //SqlParameter user = new SqlParameter("@user",txt_user_admin);
@@ -55,6 +56,7 @@ namespace doan_ver1._0
             }
             finally
             {
+                
             }
             
         }

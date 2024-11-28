@@ -20,9 +20,17 @@ VALUES
 ('user2', 'hashed_password_789', N'Người Dùng 2', 'user2@domain.com', 'User'),
 ('user3', '123', 'Lê Đại Hiệp', N'user2@domain.com', 'User');
 
+
 select * from TaiKhoan
 
 create proc dangnhap_taikhoan(@user nvarchar(50), @pass nvarchar(100))
+as
+select COUNT(*)
+from TaiKhoan
+where TenDangNhap = @user and MatKhau=@pass
+
+exec dangnhap_taikhoan 'user3','123'
+
 
 create proc tp_xemTaiKhoan
 as 
@@ -36,6 +44,18 @@ as
 select VaiTro from TaiKhoan
 where TenDangNhap = @user
 
+drop proc tp_get_vaitro
+
+create procedure tp_getvaitro
+@user nvarchar(50)
+as
+begin 
+	select VaiTro from TaiKhoan
+	where TenDangNhap = @user
+	end
+
+	exec tp_getvaitro'hieppro1'
+
 exec tp_get_vaitro'hieppro1'
 --Store Dang Ky
 create proc tp_ThemTaiKhoan(@tenDangNhap nvarchar(50), @matKhau nvarchar(100),@hoTen nvarchar(100),@email nvarchar(100), @vaiTro nvarchar(50), @ngayTao datetime)
@@ -44,13 +64,13 @@ insert into TaiKhoan values (@tenDangNhap, @matKhau ,@hoTen,@email,@vaiTro,@ngay
 
 
 exec tp_ThemTaiKhoan 'dongpham','123',N'Phạm Đình Phương Đông','dong12062004@gmail.com','Tro vien','12/12/2020'
-
+exec tp_ThemTaiKhoan 'thuanle','123',N'Lê Đình Thuận','ledinhthuan27@gmai.com','Admin','12/28/2024'
 create proc tp_XoaTaiKhoan(@tenDangNhap nvarchar(50))
 as
 delete TaiKhoan
 where TenDangNhap = @tenDangNhap
 
-exec tp_XoaTaiKhoan 'dongpham'
+exec tp_XoaTaiKhoan 'thuanbulon123'
 
 create proc tp_SuaTaiKhoan(@tenDangNhap nvarchar(50), @matKhauNew nvarchar(100),@hoTenNew nvarchar(100),@emailNew nvarchar(100), @vaiTroNew nvarchar(50), @ngayTaoNew datetime)
 as
@@ -82,7 +102,7 @@ exec tp_SuaTaiKhoan 'dongpham','456','Pham Dinh Phuong','23211TT3228@mail.tdc.ed
 		SoDienThoai NVARCHAR(15) NOT NULL         -- Số điện thoại liên hệ
 	);
 
-	INSERT INTO SanPham (MaSanPham, TenSanPham, SoLuong, DonGia, ThanhTien, DanhMuc)
+INSERT INTO SanPham (MaSanPham, TenSanPham, SoLuong, DonGia, ThanhTien, DanhMuc)
 VALUES 
 ('SP001', 'Tủ Lạnh Samsung', 10, 15000000, 150000000, 'Điện Lạnh'),
 ('SP002', 'Máy Giặt LG', 5, 10000000, 50000000, 'Gia Dụng'),
@@ -113,3 +133,45 @@ select *
 from CuaHang
 
 exec tp_xem_cuahang
+
+
+CREATE PROC tp_ThemSanPham
+    @MaSanPham NVARCHAR(50),
+    @TenSanPham NVARCHAR(50), 
+    @SoLuong INT,
+    @DonGia DECIMAL(18, 2),
+    @ThanhTien DECIMAL(18, 2),
+    @DanhMuc NVARCHAR(100)
+AS
+BEGIN
+    -- Chèn dữ liệu vào bảng SanPham
+    INSERT INTO SanPham (MaSanPham, TenSanPham, SoLuong, DonGia, ThanhTien, DanhMuc)
+    VALUES (@MaSanPham, @TenSanPham,  @SoLuong, @DonGia, @ThanhTien, @DanhMuc);
+END;
+
+exec tp_ThemSanPham
+create proc tp_XoaSanPham(@MaSanPham nvarchar(50))
+as
+begin
+delete SanPham
+where MaSanPham = @MaSanPham
+end;
+CREATE PROCEDURE tp_SuaSanPham
+    @MaSanPham NVARCHAR(50),
+    @TenSanPham NVARCHAR(255),
+    @SoLuong INT,
+    @DonGia DECIMAL(18, 2),
+    @ThanhTien DECIMAL(18, 2),
+    @DanhMuc NVARCHAR(255)
+AS
+BEGIN
+    -- Cập nhật thông tin sản phẩm trong bảng
+    UPDATE SanPham
+    SET
+        TenSanPham = @TenSanPham,
+        SoLuong = @SoLuong,
+        DonGia = @DonGia,
+        ThanhTien = @ThanhTien,
+        DanhMuc = @DanhMuc
+    WHERE MaSanPham = @MaSanPham;
+end;

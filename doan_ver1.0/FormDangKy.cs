@@ -17,7 +17,7 @@ namespace doan_ver1._0
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QDFNGC7\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True");
 
         public DataTable LoadDuLieuDangKy()
         {
@@ -49,11 +49,23 @@ namespace doan_ver1._0
         {
             them_account();
             this.Close();
+            
         }
         private void them_account() {
             try
             {
                 conn.Open();
+                if(txtTenDangNhap.Text.Length<7 || txtTenDangNhap.Text.Length > 50)
+                {
+                    MessageBox.Show("Tên đăng nhập phải từ 7 đến 50 ký tự ! ");
+                    return;
+                }
+                if (!KiemTraMatKhau(txtPass.Text))
+                {
+                    MessageBox.Show("Mật khẩu phải ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường và số!");
+                    return;
+                }
+
                 SqlCommand cmdthemTaiKhoan = new SqlCommand("tp_ThemTaiKhoan", conn);
                 cmdthemTaiKhoan.CommandType = CommandType.StoredProcedure;
 
@@ -99,7 +111,21 @@ namespace doan_ver1._0
                 conn.Close();
             }
         }
+        // kiểm tra mk
+        private bool KiemTraMatKhau(string matKhau)
+        {
+            if (matKhau.Length < 8) return false;
+            bool coChuHoa = false, coChuThuong = false, coSo = false;
 
+            foreach (char kyTu in matKhau)
+            {
+                if (char.IsUpper(kyTu)) coChuHoa = true;
+                if (char.IsLower(kyTu)) coChuThuong = true;
+                if (char.IsDigit(kyTu)) coSo = true;
+            }
+
+            return coChuHoa && coChuThuong && coSo;
+        }
         private void FormDangKy_Load(object sender, EventArgs e)
         {
 
@@ -107,7 +133,18 @@ namespace doan_ver1._0
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult thoat = MessageBox.Show("Bạn có chắc chắn muốn thoát không ?"
+                , "Xác nhận thoát"
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(thoat == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void FormDangKy_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

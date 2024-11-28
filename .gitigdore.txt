@@ -1,0 +1,16 @@
+# Bỏ qua thư mục tạm của Visual Studio
+.vs/
+
+# Bỏ qua file nhị phân và build
+bin/
+obj/
+
+# Bỏ qua file log và tạm
+*.log
+*.tmp
+
+# Bỏ qua các file cấu hình cá nhân
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

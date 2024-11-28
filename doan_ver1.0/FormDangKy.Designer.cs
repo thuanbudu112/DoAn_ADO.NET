@@ -50,6 +50,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(315, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(325, 29);
@@ -111,6 +112,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(159, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 18);
@@ -121,6 +123,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(162, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 16);
@@ -131,6 +134,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(162, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 16);
@@ -141,6 +145,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(588, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 16);
@@ -151,6 +156,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(591, 250);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 16);
@@ -161,6 +167,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(591, 147);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 16);
@@ -169,7 +176,7 @@
             // 
             // btnDangKy
             // 
-            this.btnDangKy.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDangKy.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnDangKy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDangKy.Location = new System.Drawing.Point(165, 345);
             this.btnDangKy.Name = "btnDangKy";
@@ -181,8 +188,8 @@
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLamMoi.BackColor = System.Drawing.Color.Snow;
+            this.btnLamMoi.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnLamMoi.Location = new System.Drawing.Point(397, 345);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(190, 56);
@@ -206,6 +213,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(977, 516);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnLamMoi);
@@ -225,7 +233,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormDangKy";
             this.Text = "FormDangKy";
-            this.Load += new System.EventHandler(this.FormDangKy_Load);
+            this.Load += new System.EventHandler(this.FormDangKy_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

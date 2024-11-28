@@ -17,6 +17,7 @@ namespace doan_ver1._0
         {
             InitializeComponent();
             panel_account.Hide();
+            panel_sanPham.Hide();
             quyen_admin(vaitro);
         }
         private void quyen_admin(string vaitro)
@@ -32,7 +33,7 @@ namespace doan_ver1._0
                 }
             }
         }
-        SqlConnection connect = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True;");
+        SqlConnection connect = new SqlConnection("Data Source=DESKTOP-QDFNGC7\\SQLEXPRESS;Initial Catalog=quanly_cuahang_dienmay;Integrated Security=True");
 
         private DataTable loaddl_nhanvien()
         {
@@ -59,10 +60,35 @@ namespace doan_ver1._0
             }
             return null;
         }
+        public DataTable loaddl_SanPham()
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                connect.Open();
+                SqlCommand cmd = new SqlCommand("tp_xemkho", connect);
+                cmd.CommandType= CommandType.StoredProcedure;
+
+                SqlDataAdapter hienThi = new SqlDataAdapter(cmd);
+                hienThi.Fill(dataTable);
+                return dataTable;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi "+ex.Message );
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return null;
+        }
         private void home_giaodien_Load(object sender, EventArgs e)
         {
             table_info_accout.DataSource = loaddl_nhanvien();
             table_info_accout.DefaultCellStyle.ForeColor = Color.Black;
+            dataGV_sanPham.DataSource = loaddl_SanPham();
+            dataGV_sanPham.DefaultCellStyle.ForeColor = Color.Black;
             
         }
         private void table_info_accout_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -86,6 +112,7 @@ namespace doan_ver1._0
 
         private void app_account_Click(object sender, EventArgs e)
         {
+            panel_sanPham.Hide();
             panel_account.Show();
         }
 
@@ -103,6 +130,201 @@ namespace doan_ver1._0
             dangky.ShowDialog();
         }
 
+       
 
+      
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Sp_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void app_SanPham_Click(object sender, EventArgs e)
+        {
+            panel_account.Hide();
+            panel_sanPham.Show();
+        }
+
+        private void btnThem_Sp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connect.Open();
+                if (string.IsNullOrWhiteSpace(txtDonGia.Text) || string.IsNullOrWhiteSpace(txtSoLuong.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập đủ đơn giá và số lượng.");
+                    return;
+                }
+
+                // Chuyển đổi đơn giá và số lượng từ string sang số để tính toán
+                //decimal donGia = Convert.ToDecimal(txtDonGia.Text);
+                //int soLuong = Convert.ToInt32(txtSoLuong.Text);
+
+                // Tính thành tiền
+                double thanhTien = double.Parse(txtDonGia.Text) * int.Parse(txtSoLuong.Text);
+
+                // Hiển thị thành tiền lên textbox
+                txtThanhTien.Text = thanhTien.ToString();
+
+                // Tiến hành thêm sản phẩm vào cơ sở dữ liệu
+                
+                SqlCommand cmdThem = new SqlCommand("tp_ThemSanPham",connect);
+                cmdThem.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ma = new SqlParameter("@MaSanPham", txtMa_sp.Text);
+                cmdThem.Parameters.Add(ma);
+                SqlParameter ten = new SqlParameter("@TenSanPham", txtTenSp.Text);
+                cmdThem.Parameters.Add(ten);
+                SqlParameter soLuongParam = new SqlParameter("@SoLuong", txtSoLuong.Text);
+                cmdThem.Parameters.Add(soLuongParam);
+                SqlParameter donGiaParam = new SqlParameter("@DonGia", txtDonGia.Text);
+                cmdThem.Parameters.Add(donGiaParam);
+                SqlParameter thanhTienParam = new SqlParameter("@ThanhTien", thanhTien);
+                cmdThem.Parameters.Add(thanhTienParam);
+                SqlParameter danhMuc = new SqlParameter("@DanhMuc", cbDanhMuc_Sp.Text);
+                cmdThem.Parameters.Add(danhMuc);
+                
+
+                if (cmdThem.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Thêm thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connect.Close();
+            }
+            dataGV_sanPham.DataSource = loaddl_SanPham();
+        }
+
+        private void dataGV_sanPham_Click(object sender, EventArgs e)
+        {
+            int dong = dataGV_sanPham.CurrentCell.RowIndex;
+
+           
+            // Gán các giá trị khác
+            txtMa_sp.Text = dataGV_sanPham.Rows[dong].Cells[1].Value.ToString();
+            txtTenSp.Text = dataGV_sanPham.Rows[dong].Cells[2].Value.ToString();
+            txtSoLuong.Text = dataGV_sanPham.Rows[dong].Cells[4].Value.ToString();
+            txtDonGia.Text = dataGV_sanPham.Rows[dong].Cells[5].Value.ToString();
+            txtThanhTien.Text = dataGV_sanPham.Rows[dong].Cells[6].Value.ToString();
+            cbDanhMuc_Sp.Text = dataGV_sanPham.Rows[dong].Cells[7].Value.ToString();
+
+        }
+
+        private void btnXoa_Sp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connect.Open();
+                SqlCommand cmdXoa = new SqlCommand("tp_XoaSanPham", connect);
+                cmdXoa.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ma = new SqlParameter("@MaSanPham",txtMa_sp.Text);
+                cmdXoa.Parameters.Add(ma);
+
+                if (cmdXoa.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Xóa thành công ! ");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại ! ");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connect.Close();
+            }
+            dataGV_sanPham.DataSource = loaddl_SanPham();
+        }
+
+        private void btnSua_Sp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Kiểm tra nếu người dùng nhập đủ thông tin
+                if (string.IsNullOrWhiteSpace(txtMa_sp.Text) || string.IsNullOrWhiteSpace(txtDonGia.Text) || string.IsNullOrWhiteSpace(txtSoLuong.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập đủ mã sản phẩm, đơn giá và số lượng.");
+                    return;
+                }
+
+             
+             
+
+                // Tính thành tiền
+                double thanhTien = double.Parse(txtDonGia.Text) * int.Parse(txtSoLuong.Text);
+
+                // Tiến hành sửa sản phẩm trong cơ sở dữ liệu
+                connect.Open();
+                SqlCommand cmdSua = new SqlCommand("tp_SuaSanPham", connect);
+                cmdSua.CommandType = CommandType.StoredProcedure;
+
+                // Thêm các tham số vào câu lệnh
+                cmdSua.Parameters.Add(new SqlParameter("@MaSanPham", txtMa_sp.Text));   // Mã sản phẩm
+                cmdSua.Parameters.Add(new SqlParameter("@TenSanPham", txtTenSp.Text));   // Tên sản phẩm
+                cmdSua.Parameters.Add(new SqlParameter("@SoLuong", txtSoLuong.Text));            // Số lượng
+                cmdSua.Parameters.Add(new SqlParameter("@DonGia", txtDonGia.Text));              // Đơn giá
+                cmdSua.Parameters.Add(new SqlParameter("@ThanhTien", thanhTien));        // Thành tiền
+                cmdSua.Parameters.Add(new SqlParameter("@DanhMuc", cbDanhMuc_Sp.Text));    // Danh mục
+
+                // Kiểm tra kết quả thực thi
+                cmdSua.ExecuteNonQuery();
+
+                MessageBox.Show("Cập nhật sản phẩm thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                connect.Close();
+            }
+
+            // Load lại dữ liệu
+            dataGV_sanPham.DataSource = loaddl_SanPham();
+        }
+
+        private void btnLamMoi_Sp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                dataGV_sanPham.DataSource = loaddl_SanPham();
+
+          
+                txtMa_sp.Clear();
+                txtTenSp.Clear();
+                txtSoLuong.Clear();
+                txtDonGia.Clear();
+                txtThanhTien.Clear();
+               
+
+                MessageBox.Show("Dữ liệu đã được làm mới!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
     }
 }
